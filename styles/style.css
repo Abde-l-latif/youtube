@@ -242,6 +242,7 @@ section {
 .container {
   width: fit-content;
   height: fit-content;
+  cursor: pointer;
 }
 
 .info {
@@ -249,6 +250,10 @@ section {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 5px;
+}
+
+.info h1 {
+  font-size: 18px;
 }
 
 .dataContainer {
@@ -329,6 +334,10 @@ section {
   transition: 0.3s ease;
 }
 
+.MobileIcon.activy {
+  background-color: rgba(128, 128, 128, 0.137);
+}
+
 .MobileIcon h4 {
   font-size: 12px;
   font-weight: 400;
@@ -338,9 +347,88 @@ section {
   background-color: rgba(128, 128, 128, 0.137);
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.shortsContainer {
+  width: 100%;
+}
+
+.shortsHeader {
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.shortInfo h1 {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.iContainer {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  transition: all 0.3 ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.iContainer i {
+  color: black;
+}
+
+.iContainer:hover {
+  background-color: rgba(128, 128, 128, 0.171);
+}
+
+.shortInfo {
+  display: flex;
+  align-items: center;
+}
+
+.shortFooter {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.shortFooter img {
+  border-radius: 15px;
+}
+
+.shortFooter h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.shortFooter p {
+  color: rgba(80, 80, 80, 0.712);
+  font-size: 15px;
+}
+
+.shortFooterContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 20px;
+}
+
+.shortAllContainer {
+  padding-left: 16px;
+}
+
 @media (max-width: 1500px) {
   .secondAside {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .shortFooterContainer {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -358,12 +446,15 @@ section {
   .secondAside {
     grid-template-columns: repeat(2, 1fr);
   }
+  .shortFooterContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .secondHeader input {
     width: 300px;
   }
 }
 
-@media (max-width: 746px) {
+@media (max-width: 759px) {
   .secondAside {
     flex-direction: column;
     display: flex;
@@ -371,6 +462,9 @@ section {
   }
   .secondHeader input {
     width: 200px;
+  }
+  .shortFooterContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -380,7 +474,7 @@ section {
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 534px) {
   .secondHeader input {
     width: 100px;
   }
@@ -389,6 +483,9 @@ section {
   }
   .btn-mic {
     display: none;
+  }
+  .shortFooterContainer {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

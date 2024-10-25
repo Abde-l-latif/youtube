@@ -36,3 +36,32 @@ sideBar.addEventListener("click", function (e) {
     return e.target.parentElement.classList.add("nav");
   }
 });
+
+//navBar Mobile
+
+let navMobile = document.querySelectorAll(".MobileIcon");
+let mobileSide = document.querySelector(".mobileSide");
+
+mobileSide.addEventListener("click", function (e) {
+  navMobile.forEach((e) => {
+    return e.classList.remove("activy");
+  });
+  if (e.target.classList.contains("MobileIcon")) {
+    return e.target.classList.add("activy");
+  } else if (
+    e.target.tagName == "H4" ||
+    e.target.tagName == "IMG" ||
+    e.target.tagName == "I"
+  ) {
+    return e.target.parentElement.classList.add("activy");
+  }
+});
+
+// shorts video
+
+let Close = document.querySelector(".iContainer");
+let Shorts = document.querySelector(".shortAllContainer");
+
+Close.addEventListener("click", function () {
+  Shorts.style.cssText = "display: none";
+});
